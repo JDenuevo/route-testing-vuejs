@@ -36,13 +36,47 @@
                     $2999
                 </td>
                 <td class="px-6 py-4 flex justify-between">
-                  <a href="#" class="font-medium text-gray-600 dark:text-gray-500 hover:underline">View</a>
-                  <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                  <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
+
+                  <button class=" text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-0 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800" type="button" @click="showModal">View</button>
+                  
+                  <button class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-0 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" @click="showModal">Edit</button>
+                  
+                  <button class=" text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-0 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800" type="button" @click="showModal">Delete</button>
+                  
                 </td>
             </tr>
             
         </tbody>
     </table>
 </div>
+
+<Modal
+      v-show="isModalVisible"
+      @close="closeModal"
+    />
+
 </template>
+
+<script>
+  import Modal from './Modal_form.vue';
+
+  export default {
+    name: 'Mod',
+    components: {
+      Modal,
+    },
+    data() {
+      return {
+        isModalVisible: false,
+      };
+    },
+    methods: {
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }
+    }
+  };
+</script>
