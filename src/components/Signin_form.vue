@@ -94,6 +94,8 @@
       
 <script>
 export default {
+  name: 'Signin',
+  
   data() {
     return {
       username: "",

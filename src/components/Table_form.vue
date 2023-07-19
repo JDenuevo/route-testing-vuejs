@@ -61,7 +61,7 @@
   import Modal from './Modal_form.vue';
 
   export default {
-    name: 'Mod',
+    name: 'Table',
     components: {
       Modal,
     },

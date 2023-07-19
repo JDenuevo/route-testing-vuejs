@@ -57,6 +57,8 @@
 
 <script>
 export default {
+  name: 'Dashboard',
+  
   data() {
     return {
       isNavbarHidden: true

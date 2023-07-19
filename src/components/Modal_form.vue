@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'Modal_form',
+  name: 'Modal',
   methods: {
     closeModal() {
       this.$emit('close');
