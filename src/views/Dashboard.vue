@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Dashboard_form/>
+    <Navbar_form/>
+    <br>
     <Table_form/>
     
   </div>
@@ -9,14 +10,14 @@
 <script>
 
 // @ is an alias to /src
-import Dashboard_form from '@/components/Dashboard_form.vue'
+import Navbar_form from '@/components/Navbar_form.vue'
 import Table_form from '@/components/Table_form.vue'
 
 
 export default {
   name: 'Dashboard',
   components: {
-      Dashboard_form,
+      Navbar_form,
       Table_form
   }
 }
